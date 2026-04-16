@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class ContadorClasseSemEstado extends Component {
   render() {
     return (
       <div>
-        <h1>Contador (Classe Sem Estado)</h1>
+        <h2>Contador (Classe)</h2>
         <p>Valor: {this.props.valor}</p>
         <button>Incrementar</button>
       </div>
@@ -13,3 +13,5 @@ class ContadorClasseSemEstado extends Component {
 }
 
 export default ContadorClasseSemEstado;
+
+

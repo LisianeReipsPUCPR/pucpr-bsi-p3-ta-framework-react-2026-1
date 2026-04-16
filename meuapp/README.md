@@ -1,4 +1,4 @@
-# Framework React - BSI P3 (2026/1)
+# Framework React - BSI P4 (2026/1)
 
 ## Disciplina
 
@@ -33,7 +33,7 @@ Durante a disciplina, desenvolveremos um projeto prático abordando os seguintes
 
 A disciplina será conduzida de forma prática, com evolução contínua de um projeto ao longo das aulas.
 
-Cada aula será versionada neste repositório para acompanhamento do desenvolvimento.
+Cada aula será versionada neste repositório para o acompanhamento do desenvolvimento.
 
 ---
 
