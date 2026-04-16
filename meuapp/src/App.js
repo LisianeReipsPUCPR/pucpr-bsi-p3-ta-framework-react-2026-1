@@ -1,44 +1,56 @@
-const Equipe = (props) => {
-  return (
-    <div>
-      <Sobre usuario={props.nome}
-             funcao={props.cargo}
-             anos={props.idade} />
-      <Sociais linked={props.linkedIn}
-               gith={props.github} />
-      <hr/>
-    </div>
-  )
-}
-
-const Sobre = (props) => {
-  return (
-    <div>
-      <h2>Olá, eu sou a {props.usuario}</h2>
-      <p>Eu sou {props.funcao} e tenho {props.anos} anos.</p>
-    </div>
-  )
-}
-
-const Sociais = (props) => {
-  return (
-    <div>
-      <h3>Redes sociais:</h3>
-      <ul>
-        <li><a href="https://www.linkedin.com/in/seulinkedin/">LinkedIn</a></li>
-        <li><a href="https://github.com/seugithub">GitHub</a></li>
-      </ul>
-    </div>
-  )
-}
+import { useState } from "react";
+import Equipe from "./components/Equipe";
+import ContadorFuncaoSemEstado from "./components/contador_funcao_sem_estado";
+import ContadorClasseSemEstado from "./components/contador_classe_sem_estado";
+import ContadorFuncaoComEstado from "./components/contador_funcao_com_estado";
+import ContadorClasseComEstado from "./components/contador_classe_com_estado";
 
 export default function App() {
+  const [valor, setValor] = useState(0);
   return (
     <div className="App">
-      <h1>Conheça a nossa equipe:</h1>
-      <Equipe nome="Lisiane" cargo="Desenvolvedora" idade="41" linkedin="seulinkedin" github="seugithub" />
-      <Equipe nome="Pedro" cargo="Marketing" idade="23" linkedin="linkedinpedro" github="githubpedro" />
-      <Equipe nome="Ana" cargo="Analista" idade="46" linkedin="linkedinana" github="githubana" />
+      <h1>Conheça a nossa equipe</h1>
+      <Equipe 
+        nome="Lisiane" 
+        cargo="Desenvolvedora" 
+        idade="41" 
+        Linked="seulinkedin" 
+        Github="seugithub" 
+      />
+      <Equipe 
+        nome="João" 
+        cargo="Designer" 
+        idade="35" 
+        Linked="seulinkedin" 
+        Github="seugithub" 
+      />
+      <Equipe 
+        nome="Maria" 
+        cargo="Gerente de Projetos" 
+        idade="29" 
+        Linked="seulinkedin" 
+        Github="seugithub" 
+      />
+
+      <hr />
+
+      <h1>Contador usando Função sem Estado</h1>
+      <ContadorFuncaoSemEstado />
+      
+      <hr />
+
+      <h1>Contador usando Classe sem Estado</h1>
+      <ContadorClasseSemEstado />
+
+      <hr />
+
+      <h1>Contador usando Função com Estado</h1>
+      <ContadorFuncaoComEstado valor={valor} setValor={setValor} />
+
+      <hr />
+
+      <h1>Contador usando Classe com Estado</h1>
+      <ContadorClasseComEstado valor={valor} setValor={setValor} />
     </div>
   );
 }
