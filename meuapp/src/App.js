@@ -6,6 +6,7 @@ import FormCadastro from "./components/FormCadastro";
 import Home from "./pages/Home";
 import EquipePage from "./pages/EquipePage";
 import ContadoresPage from "./pages/ContadoresPage";
+import UsuariosPage from "./pages/UsuariosPage";
 
 export default function App() {
   const [valor, setValor] = useState(0);
@@ -23,6 +24,7 @@ export default function App() {
           />
 
           {/* Nova rota */}
+          <Route path="usuarios" element={<UsuariosPage />} />
           <Route path="cadastro" element={<FormCadastro />} />
         </Route>
 
